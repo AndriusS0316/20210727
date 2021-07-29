@@ -2,11 +2,44 @@ function Puodukas(spalva, turis) {
     this.spalva = spalva;
     this. turis = turis;
     this.kiekis = 0;
+    this.ipilk = function(kiek) {
+        if (kiek <= 0) {
+            return;
+        }
+        this.kiekis += this.kiekis;
+        if (this.kiekis > this.turis) {
+            this.kiekis = this.turis;
+        }
+        this.isgerk = function(kiek) {
+            if (kiek <= 0) {
+                return;
+            }
+            this.kiekis -= this.kiekis;
+            if (this.kiekis < 0) {
+                this.kiekis = 0;
+            }
+        }
+    }
 }
+
+let Masina = function(pavadinimas) {
+    this.pavadinimas = pavadinimas;
+    this.greitis = 0;
+    this.kelias = 0;
+};
+
+
+
+let m = new Masina("Ford");
+console.log(m);
+
+
 
 let p1 = new Puodukas ("baltas", 250);
 console.log(p1);
 let p2 = new Puodukas ("rudas", 300);
+
+p1.ipilk(100);
 
 console.log(p1, p2);
 
