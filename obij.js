@@ -5,9 +5,15 @@ function Puodukas(spalva, turis) {
 }
 
 let p1 = new Puodukas ("baltas", 250);
+console.log(p1);
 let p2 = new Puodukas ("rudas", 300);
 
 console.log(p1, p2);
+
+
+// let o = {}; //tas pats, kas zemesneje eiluteje.
+
+// let o1 = new Object(); //tas pats, kas aukstesneje eiluteje.
 
 // function suma (a, b) {
 //     return a + b;
